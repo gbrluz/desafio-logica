@@ -16,18 +16,34 @@ public class AgendaTelefonica {
     }
 
     public void deletarContato(String nome) {
+        boolean contatoRemovido = false;
+
         for (Contato contato : contatos) {
             if (contato.getNome().equals(nome)) {
                 contatos.remove(contato);
+                contatoRemovido = true;
+                System.out.println("Contato removido com sucesso!");
+                break;
             }
         }
-        System.out.println("Contato removido com sucesso!");
+
+        if (!contatoRemovido) {
+            System.out.println("Contato não encontrado.");
+        }
     }
 
     public void listarContatos() {
         for (Contato contato : contatos) {
             System.out.println("Nome: "+contato.getNome());
             System.out.println("Telefone: "+contato.getTelefone());
+        }
+    }
+
+    public boolean isEmpty() {
+        if (contatos.isEmpty()){
+            return true;
+        }else{
+            return false;
         }
     }
 }

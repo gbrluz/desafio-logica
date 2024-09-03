@@ -34,7 +34,11 @@ public class Ex4 {
                 resultado = num1 * num2;
                 break;
             case 4:
-                resultado = num1 / num2;
+                if (num2 != (double) 0) {
+                    resultado = num1 / num2;
+                    break;
+                }
+                System.out.println("Impossível dividir por zero.");
                 break;
             default:
                 System.out.println("Opção inválida.");

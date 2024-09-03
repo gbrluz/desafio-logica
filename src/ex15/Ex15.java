@@ -22,7 +22,7 @@ public class Ex15 {
         System.out.println("Digite o segundo valor: ");
         Double num2 = scanner.nextDouble();
 
-        double resultado;
+        double resultado = 0;
 
         Calculadora calculadora = new Calculadora(num1, num2);
 
@@ -37,7 +37,11 @@ public class Ex15 {
                 resultado = calculadora.multiplicacao(num1, num2);
                 break;
             case 4:
-                resultado = calculadora.divisao(num1, num2);
+                if (num2 != (double) 0) {
+                    resultado = calculadora.divisao(num1,num2);
+                    break;
+                }
+                System.out.println("Impossível dividir por zero.");
                 break;
             case 5:
                 resultado = calculadora.potencia(num1, num2);

@@ -1,5 +1,4 @@
 package ex20;
-
 public class Produto {
     private int id;
     private String nome;
@@ -29,24 +28,7 @@ public class Produto {
         return quantidadeEmEstoque;
     }
 
-    public void setAtributo(Object atributo) {
-        if (atributo instanceof Integer) {
-            this.id = (int) atributo;
-        } else if (atributo instanceof String) {
-            this.nome = (String) atributo;
-        } else if (atributo instanceof Double) {
-            this.preco = (double) atributo;
-        } else if (atributo instanceof Produto) {
-            Produto p = (Produto) atributo;
-            this.id = p.id;
-            this.nome = p.nome;
-            this.preco = p.preco;
-            this.quantidadeEmEstoque = p.quantidadeEmEstoque;
-        }
+    public void setQuantidadeEmEstoque(int quantidadeEmEstoque) {
+        this.quantidadeEmEstoque = quantidadeEmEstoque;
     }
-
-    public Object getAtributo() {
-        return this;
-    }
-
 }

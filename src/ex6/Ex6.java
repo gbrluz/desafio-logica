@@ -13,7 +13,7 @@ public class Ex6 {
         System.out.println("Números aleatórios: ");
         for (int i = 0; i < 10; i++) {
             numeros[i] = random.nextInt(101);
-            System.out.println(numeros[i]);
+            System.out.print(numeros[i] + ", " );
 
             if (numeros[i] < menor) {
                 menor = numeros[i];
@@ -23,7 +23,7 @@ public class Ex6 {
             }
         }
 
-        System.out.println("Menor valor: "+menor);
+        System.out.println("\nMenor valor: "+menor);
         System.out.println("Maior valor: "+maior);
     }
 }

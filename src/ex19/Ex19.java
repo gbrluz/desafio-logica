@@ -33,6 +33,10 @@ public class Ex19 {
                     ag.deletarContato(nomeDeletar);
                     break;
                 case 3:
+                    if (ag.isEmpty()){
+                        System.out.println("Agenda telefonica vazia");
+                        break;
+                    }
                     ag.listarContatos();
                     break;
                 case 0:

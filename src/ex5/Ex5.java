@@ -10,7 +10,7 @@ public class Ex5 {
         Integer numero = scanner.nextInt();
 
         System.out.println("Tabuada: ");
-        for (int i = 0; i < 10; i++) {
+        for (int i = 1; i <= 10; i++) {
             int tabuada = numero * i;
             System.out.println(numero + " x " + i + " = " + tabuada);
         }
